@@ -1,0 +1,21 @@
+{#  This template grabs values produced by the Autogiroanmälan app and produce HTML that can be sent in a mail and attached as a PDF.
+#}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Anmälan om autogiro</title>
+</head>
+<body>
+    <h1>Anmälan om autogiro</h1>
+    <p><b>Personnummer: </b>{{UserData.userData.personId|e}} </p>
+    <p><b>Namn: </b>{{UserData.userData.fullName|e}} </p>
+    <p><b>Gatuadress: </b>{{UserData.userData.address|e}} </p>
+    <p><b>Postadress: </b>{{UserData.userData.zipcode|e}} {{UserData.userData.city|e}} </p>
+    <p><b>E-postadress: </b>{{UserData.userData.email|e}} </p>
+    <p><b>Mobiltelefon: </b>{{UserData.userData.mobile|e}} </p>
+    <p><b>Kundnummer: </b>{{UserData.userData.customerNr|e}} </p>
+    <p><b>Clearingnummer: </b>{{UserData.userData.clearingNr|e}} </p>
+    <p><b>Bankkonto: </b>{{UserData.userData.bankAccount|e}} </p>
+    <p><b>Betalningar som medgivande avser: </b>{{UserData.userData.paymentmessage|e}} </p>
+</body>
+</html>

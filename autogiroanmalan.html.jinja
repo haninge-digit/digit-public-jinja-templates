@@ -14,6 +14,13 @@
     <p><b>E-postadress: </b>{{UserData.userData.email|e}} </p>
     <p><b>Mobiltelefon: </b>{{UserData.userData.mobile|e}} </p>
     <p><b>Kundnummer: </b>{{UserData.userData.customerNr|e}} </p>
+    <p><b>Bankens namn: </b>
+        {% if UserData.userData.bankName != "annanBank" %}
+            {{UserData.userData.bankName}}
+        {% else %}
+            {{UserData.userData.otherBankName|e}}
+        {% endif %}
+    </p>
     <p><b>Clearingnummer: </b>{{UserData.userData.clearingNr|e}} </p>
     <p><b>Bankkonto: </b>{{UserData.userData.bankAccount|e}} </p>
     <p><b>Betalningar som medgivande avser: </b>{{UserData.userData.paymentmessage|e}} </p>
